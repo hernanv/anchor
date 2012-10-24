@@ -1,0 +1,25 @@
+// ============================================================ //
+// ----- > Clear ---------------------------------------------- //
+// ============================================================ //
+
+@mixin clear($method: visible) {
+
+  @if $method == visible {
+
+    &:before,
+    &:after {
+      content: '';
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+
+  }
+
+  @else if  $method == hidden {
+   overflow: hidden;
+  }
+
+}

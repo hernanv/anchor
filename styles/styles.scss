@@ -1,0 +1,223 @@
+// ====================================================================== //
+// ===== Functions, Mixins & Settings =================================== //
+// ====================================================================== //
+
+@import 'common/functions';
+@import 'common/mixins';
+@import 'common/settings';
+
+// ====================================================================== //
+// ===== Modules ======================================================== //
+// ====================================================================== //
+
+@import 'common/modules';
+
+/* ====================================================================== */
+/* ===== Shared Styles ================================================== */
+/* ====================================================================== */
+// Place here the shared styles, accordint to the
+// "Splited Media Queries" approach: http://goo.gl/VEV1g.
+
+html {
+  // Forcing the vertical scrollbar to display all the time.
+  overflow-y: scroll;
+  cursor: default;
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $webfont-1;
+  font-size: em(14px, 16px);
+  line-height: 1.5;
+  color: $color-1;
+  background: $color-1-lightest;
+}
+
+// Content or page wrapper. Apply to the <body> when
+// possible: http://goo.gl/OtZSc.
+.wrapper {
+}
+
+/* ============================================================ */
+/* ----- > Header --------------------------------------------- */
+/* ============================================================ */
+
+.header {
+}
+
+.branding {
+
+  h1 {
+  }
+
+  h2 {
+
+  }
+
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Navigation ------------------------------ */
+/* -------------------------------------------------- */
+
+.header-nav {
+
+  a {
+  }
+
+  a:hover {
+  }
+
+}
+
+// To highlight the current section define the proper
+// class in the <body> element.
+.section-title .header .section-title {
+  cursor: default;
+}
+
+/* ============================================================ */
+/* ----- > Content -------------------------------------------- */
+/* ============================================================ */
+
+.content {
+}
+
+/* ============================================================ */
+/* ----- > Sidebar -------------------------------------------- */
+/* ============================================================ */
+
+.sidebar {
+}
+
+/* ============================================================ */
+/* ----- > Footer --------------------------------------------- */
+/* ============================================================ */
+
+.footer {
+}
+
+.footer-nav {
+
+  li {
+  }
+
+  a {
+  }
+
+  a:hover {
+  }
+
+}
+
+// To highlight the current section define the proper
+// class in the <body> element.
+.section-title .footer .section-title {
+  cursor: default;
+}
+
+/* ====================================================================== */
+/* ===== Sections ======================================================= */
+/* ====================================================================== */
+
+/* ============================================================ */
+/* ----- > Section Title -------------------------------------- */
+/* ============================================================ */
+
+.section-title {
+}
+
+/* ====================================================================== */
+/* ===== Large Screen =================================================== */
+/* ====================================================================== */
+// Also available 'larger-screen' & 'largest-screen' breakpoints.
+
+// Use this class to hide content from other media.
+.only-large-screen {
+  display: none;
+}
+
+@include breakpoint(large-screen) {
+
+  // Don't display in medium screen.
+  .no-large-screen {
+    display: none;
+  }
+
+  // Edit if needed.
+  .only-large-screen {
+    display: block;
+  }
+
+}
+
+/* ====================================================================== */
+/* ===== Medium Screen ================================================== */
+/* ====================================================================== */
+
+// Use this class to hide content from other media.
+.only-medium-screen {
+  display: none;
+}
+
+@include breakpoint(medium-screen) {
+
+  // Don't display in medium screen.
+  .no-medium-screen {
+    display: none;
+  }
+
+  // Edit if needed.
+  .only-medium-screen {
+    display: block;
+  }
+
+}
+
+/* ====================================================================== */
+/* ===== Small Screen =================================================== */
+/* ====================================================================== */
+// Also available 'smaller-screen' & 'smallest-screen' breakpoints.
+
+// Use this class to hide content from other media.
+.only-small-screen {
+  display: none;
+}
+
+@include breakpoint(small-screen) {
+
+  // Don't display in small screen.
+  .no-small-screen {
+    display: none;
+  }
+
+  // Edit if needed.
+  .only-small-screen {
+    display: block;
+  }
+
+}
+
+/* ====================================================================== */
+/* ===== Print ========================================================== */
+/* ====================================================================== */
+
+// Use this class to hide content from other media.
+.only-print {
+  display: none;
+}
+
+@media print {
+
+  // Don't display in smaller screen.
+  .no-print {
+    display: none;
+  }
+
+  // Edit if needed.
+  .only-print {
+    display: block;
+  }
+
+}

@@ -1,0 +1,66 @@
+/* ====================================================================== */
+/* ===== Typography ===================================================== */
+/* ====================================================================== */
+
+// ============================================================ //
+// ----- > Safe WebFonts -------------------------------------- //
+// ============================================================ //
+
+// Serif.
+$safe-webfont-1: Georgia, serif;
+$safe-webfont-2: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+$safe-webfont-3: 'Times New Roman', Times, serif;
+
+// Sans Serif.
+$safe-webfont-4: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$safe-webfont-5: Arial, Helvetica, sans-serif;
+$safe-webfont-6: 'Arial Black', Gadget, sans-serif;
+$safe-webfont-7: Impact, Charcoal, sans-serif;
+$safe-webfont-8: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+$safe-webfont-9: Tahoma, Geneva, sans-serif;
+$safe-webfont-10: 'Trebuchet MS', Helvetica, sans-serif;
+$safe-webfont-11: Verdana, Geneva, sans-serif;
+
+// Monospace.
+$safe-webfont-11: 'Courier New', Courier, monospace;
+$safe-webfont-12: 'Lucida Console', Monaco, monospace;
+
+// ============================================================ //
+// ----- > Embedded WebFonts ---------------------------------- //
+// ============================================================ //
+
+// WebFont Variants.
+$embedded-webfont-1: 'FontName1';
+$embedded-webfont-2: 'FontName2';
+
+@font-face {
+  font-family: 'FontName1';
+  src: url('../fonts/font-name-1.eot');
+  src: url('../fonts/font-name-1.eot?#iefix') format(embedded-opentype),
+    url('../fonts/font-name-1.woff') format(woff),
+    url('../fonts/font-name-1.ttf') format(truetype),
+    url('../fonts/font-name-1.svg#FontName1') format(svg);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontName2';
+  src: url('../fonts/font-name-2.eot');
+  src: url('../fonts/font-name-2.eot?#iefix') format(embedded-opentype),
+    url('../fonts/font-name-2.woff') format(woff),
+    url('../fonts/font-name-2.ttf') format(truetype),
+    url('../fonts/font-name-2.svg#FontName2') format(svg);
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ============================================================ //
+// ----- > Project WebFonts ----------------------------------- //
+// ============================================================ //
+
+$webfont-1: $safe-webfont-5;
+$webfont-2: $safe-webfont-1;
+$webfont-3: $safe-webfont-11;
+$webfont-4: $embedded-webfont-1, $webfont-1;
+$webfont-5: $embedded-webfont-2, $webfont-1;

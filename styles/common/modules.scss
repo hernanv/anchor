@@ -1,0 +1,365 @@
+/* ====================================================================== */
+/* ===== Modules ======================================================== */
+/* ====================================================================== */
+
+/* ============================================================ */
+/* ----- > New Elements --------------------------------------- */
+/* ============================================================ */
+
+header, hgroup, nav, article, section, aside,
+footer, figure, figcaption, details, menu, summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* ============================================================ */
+/* ----- > Text ----------------------------------------------- */
+/* ============================================================ */
+
+/* -------------------------------------------------- */
+/* ----- >> Headings -------------------------------- */
+/* -------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $webfont-4;
+  font-weight: bold;
+  color: $color-1-dark;
+  line-height: 1;
+}
+
+h1 {
+  margin:  0 0 .30em;
+  font-size: em(44px, 14px);
+}
+
+h2 {
+  margin:  0 0 .40em;
+  font-size: em(36px, 14px);
+}
+
+h3 {
+  margin:  0 0 .50em;
+  font-size: em(28px, 14px);
+}
+
+h4 {
+  margin:  0 0 .60em;
+  font-size: em(21px, 14px);
+}
+
+h5 {
+  margin:  0 0 .70em;
+  font-size: em(18px, 14px);
+}
+
+h6 {
+  margin:  0 0 .80em;
+  font-size: em(14px, 14px);
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Subheading ------------------------------ */
+/* -------------------------------------------------- */
+
+.subheading {
+  margin:  0 0 .60em;
+  font-size: em(16px, 14px);
+  line-height: 1.2;
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Links ----------------------------------- */
+/* -------------------------------------------------- */
+
+// Be sure that your styles don't overlap by using the following
+// order: :link, :visited, :hover & :active.
+
+a {
+  color: $color-1;
+}
+
+// Don't use negative hovers: goo.gl/OISWR.
+a:hover {
+  color: $color-1-darker;
+  border-bottom: 1px solid $color-1-darker;
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Format ---------------------------------- */
+/* -------------------------------------------------- */
+
+[title] {
+  cursor: help;
+}
+
+p {
+  margin: 0 0 .75em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+u,
+ins {
+  text-decoration: underline;
+}
+
+s,
+del {
+  text-decoration: line-through;
+}
+
+del {
+  color: lighten($color-1, 30%);
+}
+
+mark {
+  background: $color-1;
+  color: $color-1-lightest;
+}
+
+dfn,
+abbr {
+  border-bottom: 1px dotted;
+  font-style: italic;
+}
+
+address {
+  font-style: normal;
+}
+
+small {
+  font-size: 75%;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.4em;
+}
+
+sub {
+  bottom: -.2em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre, code, kbd, samp {
+  font-size: 1em;
+  font-family: $webfont-3;
+}
+
+hr {
+  margin: 1em 0;
+  display: block;
+  border: none;
+  border-top: 1px solid $color-1-light;
+}
+
+@include selection($color-1-lightest, $color-1);
+
+/* -------------------------------------------------- */
+/* ----- >> Lists ----------------------------------- */
+/* -------------------------------------------------- */
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+li ul,
+li ol {
+  margin: 0 1.5em;
+}
+
+dl {
+}
+
+dt {
+}
+
+dd {
+  margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Quotes ---------------------------------- */
+/* -------------------------------------------------- */
+
+q,
+blockquote {
+  quotes: none;
+}
+
+blockquote {
+  padding: .8em 0 .1em 1.2em;
+  margin: 0;
+  border-left: 4px solid $color-1-light;
+}
+
+q,
+cite {
+  font-style: italic;
+}
+
+/* ============================================================ */
+/* ----- > Media ---------------------------------------------- */
+/* ============================================================ */
+
+img {
+  display: inline-block;
+  border: 0;
+}
+
+// Edit the dimensions and style as needed.
+[src*='placeholder'] {
+  background: $color-1-lighter;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+}
+
+/* ============================================================ */
+/* ----- > Tables --------------------------------------------- */
+/* ============================================================ */
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Define the <col> class for each column.
+.col-name {
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}
+
+// Hide the borders on any empty <th>.
+th:empty {
+  border: none;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid $color-1-light;
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background: $color-1-lighter;
+}
+
+tfoot {
+  text-align: center;
+}
+
+/* ============================================================ */
+/* ----- > Forms ---------------------------------------------- */
+/* ============================================================ */
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  padding: 1em;
+  border: 1px solid $color-1-light;
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Labels, Inputs & Textareas -------------- */
+/* -------------------------------------------------- */
+
+// To indicate requiered fields use <sup title="Required">*</sup>.
+label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea,
+select {
+  width: 50%;
+  padding: 5px;
+  margin: 0 0 .75em;
+  display: block;
+  line-height: 1.5;
+  color: $color-1;
+  background: $color-1-lightest;
+  border: 1px solid $color-1-light;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid darken($color-1-light, 30%);
+  text-shadow: none;
+  outline: none;
+}
+
+/* -------------------------------------------------- */
+/* ----- >> Buttons --------------------------------- */
+/* -------------------------------------------------- */
+
+// Dont use <input type="submit">, use <button type="submit"> instead.
+button,
+.button {
+  padding: 5px 10px;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid $color-1-light;
+  background: $color-1-lighter;
+}

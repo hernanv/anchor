@@ -1,0 +1,8 @@
+// ============================================================ //
+// ----- > Selection ------------------------------------------ //
+// ============================================================ //
+
+@mixin selection($font-color, $background-color) {
+  ::-moz-selection { color: $font-color; background: $background-color; }
+  ::selection { color: $font-color; background: $background-color; }
+}
