@@ -1,11 +1,10 @@
 User-agent: *
-Disallow: /async/
 Disallow: /fonts/
 Disallow: /includes/
-Disallow: /images/layout/
-Disallow: /images/development/
+Disallow: /images/styles/
 Disallow: /scripts/
 Disallow: /styles/
 Disallow: /*.js$
 Disallow: /*.css$
+Disallow: /*.scss$
 Disallow: /*.txt$
